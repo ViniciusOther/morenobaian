@@ -21,7 +21,6 @@ def download(url, file_name):
 
 def gen_thumb(file_name):
     thumb = file_name +  '.jpeg'
-    # args = ['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', 'cache/' + file_name, '-ss', '00:00:59', '-frames:v', '1','thumbs/' + thumb] #i know it looks weird
     args = ['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', 'cache/' + file_name, '-ss', '00:00:59', '-frames:v', '1','thumbs/' + thumb] #i know it looks weird
     process = subprocess.Popen(args)
     comm = process.communicate()[0]
